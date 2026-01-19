@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Hall of Fame - Team Maverick Racing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+            color: #F3F4F6;
+            background-image: linear-gradient(rgba(17, 24, 39, 0.98), rgba(17, 24, 39, 0.98)), url('TM_logo_white.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: 40vw;
+        }
+        .custom-text-color { color: #0D98BA; }
+        
+        /* Spaced Heading Style */
+        .main-heading {
+            letter-spacing: 0.15em;
+            line-height: 1.2;
+        }
+
+        /* Blue Theme Line */
+        .heading-underline {
+            height: 4px;
+            width: 100px;
+            background-color: #0D98BA;
+            margin: 15px 0 0;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .heading-underline {
+                margin: 15px auto 0;
+            }
+        }
+
+        .testimonial-card {
+            background: rgba(31, 41, 55, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: #0D98BA;
+            box-shadow: 0 10px 30px -10px rgba(13, 152, 186, 0.2);
+        }
+
+        .back-btn {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #0D98BA;
+            color: #0D98BA;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="py-16 border-b border-gray-800 bg-gray-900/50">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div>
+                <h1 class="main-heading text-4xl md:text-5xl font-black text-white uppercase">
+                    Alumni Hall of Fame
+                </h1>
+                <div class="heading-underline"></div>
+                <p class="text-gray-400 mt-6 italic text-lg">The engineers who built the foundation of Team Maverick.</p>
+            </div>
+            <a href="./TM_Main.html" class="back-btn mt-10 md:mt-0 text-white px-8 py-3 rounded-full flex items-center font-bold uppercase text-sm tracking-widest">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Back to Home
+            </a>
+        </div>
+    </header>
+
+    <main class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="row row-cols-1 row-cols-md-2 g-5">
+                
+                <div class="col">
+                    <div class="testimonial-card p-10 rounded-3xl h-100">
+                        <div class="flex items-center mb-6">
+                            <img src="./Alumni_Photos/Sarthak_Shukla.png" class="w-20 h-20 rounded-full border-2 border-cyan-500 mr-5 object-cover" alt="Alumni">
+                            <div>
+                                <h4 class="text-white font-bold text-xl mb-1">Sarthak Shukla - Vice Captain TM</h4>
+                                <p class="custom-text-color text-sm font-medium mb-0">Class of 2025 | CEO of CrystalPools</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-lg leading-relaxed italic">"Team Maverick helped me grow as a leader, engineer, and problem-solver. I gained strong technical expertise in powertrain and vehicle systems, learned to manage teams and projects under pressure, built confidence and ownership, strengthened communication and teamwork skills, and earned national recognition with top ranks—giving you credibility and maturity that now benefits your career and businesses."</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="testimonial-card p-10 rounded-3xl h-100">
+                        <div class="flex items-center mb-6">
+                            <img src="./Alumni_Photos/Vaid_Kulkarni.png" class="w-20 h-20 rounded-full border-2 border-cyan-500 mr-5 object-cover" alt="Alumni">
+                            <div>
+                                <h4 class="text-white font-bold text-xl mb-1">Vaid Kulkarni - VD Head</h4>
+                                <p class="custom-text-color text-sm font-medium mb-0">Class of 2024 | Intern @ TESLA (PhD Aerospace Georgia Tech)</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-lg leading-relaxed italic">"Team Maverick is where theory meets reality. The direct FSAE experience I gained on the team was the primary differentiator that led to my Tesla internship, proving that the skills we build here are world-class. That same foundation of excellence supported my successful application to Georgia Tech for advanced studies. For me, Team Maverick wasn't just a project; it was the launchpad for my career in sustainable energy and elite engineering."</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="testimonial-card p-10 rounded-3xl h-100">
+                        <div class="flex items-center mb-6">
+                            <img src="./Alumni_Photos/Prashant_Misal.jpg" class="w-20 h-20 rounded-full border-2 border-cyan-500 mr-5 object-cover" alt="Alumni">
+                            <div>
+                                <h4 class="text-white font-bold text-xl mb-1">Prashant Misal - VD Head</h4>
+                                <p class="custom-text-color text-sm font-medium mb-0">Class of 2015 | Manager - Asset Reliability</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-lg leading-relaxed italic">"The transition from the workshop to the workplace felt seamless, as Team Maverick provided me with a level of professional readiness that textbooks simply cannot replicate. The direct FSAE experience was the cornerstone of my resume, serving as the primary catalyst in securing my current role. Beyond the technical skills, the team instilled in me the unshakeable confidence to navigate high-pressure, real-world engineering challenges with precision and poise."</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="testimonial-card p-10 rounded-3xl h-100">
+                        <div class="flex items-center mb-6">
+                            <img src="./Alumni_Photos/Kaushik_Sawale.jpeg" class="w-20 h-20 rounded-full border-2 border-cyan-500 mr-5 object-cover" alt="Alumni">
+                            <div>
+                                <h4 class="text-white font-bold text-xl mb-1">Kaushik Sawale - Vice Captain</h4>
+                                <p class="custom-text-color text-sm font-medium mb-0">Class of 2024 | Material Compliance Engineer</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-lg leading-relaxed italic">"Being a part of Team Maverick provided me with a valuable opportunity to gain hands-on experience in building a car from the ground up. This life-changing experience not only strengthened my technical skill set but also significantly enhanced my professional profile. Furthermore, the exposure to national-level competitions broadened my industry perspective and played a crucial role in helping me secure an internship, which was eventually followed by a job offer."</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="testimonial-card p-10 rounded-3xl h-100">
+                        <div class="flex items-center mb-6">
+                            <img src="./Alumni_Photos/Prasad_Verulkar.png" class="w-20 h-20 rounded-full border-2 border-cyan-500 mr-5 object-cover" alt="Alumni">
+                            <div>
+                                <h4 class="text-white font-bold text-xl mb-1">Prasad Verulkar - Captain & Suspension Head</h4>
+                                <p class="custom-text-color text-sm font-medium mb-0">Class of 2018 | Data Engineering & Analytics</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-lg leading-relaxed italic">"Formula Student helped me far beyond mechanical engineering, even though my career eventually moved into analytics. The biggest impact was the way it trained me to think.
+
+Formula Student gives you a distinct edge because you’re not just building a car or completing tasks—you’re constantly asking whether your work creates real impact. That focus on "Impact" forces you to connect efforts with outcomes: performance gains, reliability, cost, timelines, and team goals. Every decision has consequences, and you learn early on to prioritize what truly moves the needle rather than what looks impressive on paper. 
+
+This mindset shift—learning to think in terms of value, results, and measurable impact—is incredibly powerful. This truly sets a tone for the career, be it in any domain!"</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="testimonial-card p-10 rounded-3xl h-100">
+                        <div class="flex items-center mb-6">
+                            <img src="./Alumni_Photos/Prafull_Powar.jpeg" class="w-20 h-20 rounded-full border-2 border-cyan-500 mr-5 object-cover" alt="Alumni">
+                            <div>
+                                <h4 class="text-white font-bold text-xl mb-1">Prafull Powar - Aerodynamics Head</h4>
+                                <p class="custom-text-color text-sm font-medium mb-0">Class of 2018 | Implementation Consultant</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-lg leading-relaxed italic">"Team Maverick gave me hands-on engineering experience beyond textbooks and this experience became a key highlight in my interviews, helping me land my first job at a reputable MNC. The team also taught me problem-solving, resilience, and the importance of staying committed through challenges."</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="testimonial-card p-10 rounded-3xl h-100">
+                        <div class="flex items-center mb-6">
+                            <img src="./Alumni_Photos/Soham_Dhage.png" class="w-20 h-20 rounded-full border-2 border-cyan-500 mr-5 object-cover" alt="Alumni">
+                            <div>
+                                <h4 class="text-white font-bold text-xl mb-1">Soham Dhage - Aerodynamics Head</h4>
+                                <p class="custom-text-color text-sm font-medium mb-0">Class of 2024 | Volkswagon Group, UK</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-lg leading-relaxed italic">"Beyond the immediate career wins, Team Maverick acted as the spark for my lifelong professional passion. It was in the pits and design reviews of our FSAE seasons that I first discovered the complexities of fluid dynamics. This fascination grew from a team project into a dedicated career path, leading me to pursue a Master’s in CFD at Cranfield University in the UK. The team didn't just give me a hobby; it gave me a specialized direction, transforming a curiosity about airflow into a master’s degree from a world-leading institution."</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="testimonial-card p-10 rounded-3xl h-100">
+                        <div class="flex items-center mb-6">
+                            <img src="./Alumni_Photos/Pranali_Veer.png" class="w-20 h-20 rounded-full border-2 border-cyan-500 mr-5 object-cover" alt="Alumni">
+                            <div>
+                                <h4 class="text-white font-bold text-xl mb-1">Pranali Veer - Aerodynamics Head</h4>
+                                <p class="custom-text-color text-sm font-medium mb-0">Class of 2019 | Technical Consultant </p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-lg leading-relaxed italic">"Team Maverick helped me build confidence, enhance my teamwork, and develop critical thinking skills. It gave me a practical understanding of the industrial world, especially in areas like CAD design softwares and PLM systems, allowing me to quickly adapt and excel in my role."</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-12 border-t border-gray-800 text-center bg-gray-900/30">
+        <p class="text-gray-500 text-sm font-medium tracking-wide">
+            &copy; 2026 Team Maverick Racing. Engineering the future, one lap at a time.
+        </p>
+    </footer>
+
+</body>
+</html>
