@@ -63,10 +63,13 @@
         .car-3d {
             width: 100%;
             transform-style: preserve-3d;
-            animation: floatAndRotate 6s infinite ease-in-out;
+            /* REMOVED: animation: floatAndRotate 6s infinite ease-in-out; */
             filter: drop-shadow(0 30px 60px rgba(13, 152, 186, 0.2));
+            /* Added slight initial rotation to keep the 3D perspective static */
+            transform: rotateY(-10deg) rotateX(2deg); 
         }
 
+        /* Animation keyframes kept but currently unused */
         @keyframes floatAndRotate {
             0%, 100% { transform: rotateY(-10deg) rotateX(2deg) translateY(0px); }
             50% { transform: rotateY(5deg) rotateX(-2deg) translateY(-30px); }
@@ -109,7 +112,43 @@
         }
         .nav-link-custom:hover::after { width: 100%; }
 
-        /* --- UPDATED INTERACTIVE GALLERY EFFECTS --- */
+        /* Command Center Card Styling */
+        .dept-card {
+            background: rgba(31, 41, 55, 0.3);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s ease;
+        }
+
+        .dept-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(13, 152, 186, 0.15), transparent 40%);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+
+        .dept-card:hover::before {
+            opacity: 1;
+        }
+
+        .dept-card:hover {
+            border-color: var(--cyan-brand);
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 0 30px rgba(13, 152, 186, 0.2);
+        }
+
+        .dept-card > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* --- GALLERY EFFECTS --- */
         .parallax-wrapper { height: 650vh; }
         .parallax-sticky { position: sticky; top: 0; height: 100vh; display: flex; align-items: center; overflow: hidden; }
         .parallax-track { display: flex; gap: 8vw; padding: 0 15vw; transition: transform 0.1s linear; }
@@ -129,7 +168,6 @@
             transform: scale(1) translateY(0);
         }
 
-        /* The Glow Backdrop */
         .gallery-item::before {
             content: '';
             position: absolute;
@@ -204,8 +242,8 @@
             <span class="font-bold text-xl uppercase tracking-tighter text-white">Team Maverick</span>
         </a>
         <div class="hidden md:flex gap-8 items-center">
-            <a href="/" class="nav-link-custom text-white text-xs font-bold uppercase tracking-widest no-underline">Home</a>
-            <a href="/cars" class="nav-link-custom text-white text-xs font-bold uppercase tracking-widest no-underline">The Fleet</a>
+            <a href="./TM_Main.html" class="nav-link-custom text-white text-xs font-bold uppercase tracking-widest no-underline">Home</a>
+            <a href="./previous_cars.html" class="nav-link-custom text-white text-xs font-bold uppercase tracking-widest no-underline">The Fleet</a>
         </div>
     </header>
 
@@ -236,26 +274,26 @@
     <section class="py-24">
         <div class="container mx-auto px-6">
             <div class="relative text-center mb-20 reveal">
-                <span class="bg-text">MACHINA</span>
+                <span class="bg-text">AVIRA</span>
                 <h2 class="text-3xl md:text-5xl font-black relative z-10 uppercase tracking-tight">Engineering Excellence</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="reveal">
-                    <div class="bg-white/5 backdrop-blur-md p-10 rounded-2xl border border-white/10 h-full transition-all hover:border-cyan-500 group">
+                    <div class="dept-card p-10 rounded-2xl h-full">
                         <div class="w-12 h-1 bg-cyan-500 mb-6 transition-all group-hover:w-20"></div>
                         <h3 class="text-cyan-400 font-bold mb-4 uppercase text-xl">Powertrain</h3>
                         <p class="text-gray-400 leading-relaxed">Custom-tuned KTM 390cc engine with optimized mapping for peak thermodynamic efficiency.</p>
                     </div>
                 </div>
                 <div class="reveal">
-                    <div class="bg-white/5 backdrop-blur-md p-10 rounded-2xl border border-white/10 h-full transition-all hover:border-cyan-500 group">
+                    <div class="dept-card p-10 rounded-2xl h-full">
                         <div class="w-12 h-1 bg-cyan-500 mb-6 transition-all group-hover:w-20"></div>
                         <h3 class="text-cyan-400 font-bold mb-4 uppercase text-xl">Electronics</h3>
                         <p class="text-gray-400 leading-relaxed">Advanced DAQ system featuring custom PCBs and Low Voltage architecture.</p>
                     </div>
                 </div>
                 <div class="reveal">
-                    <div class="bg-white/5 backdrop-blur-md p-10 rounded-2xl border border-white/10 h-full transition-all hover:border-cyan-500 group">
+                    <div class="dept-card p-10 rounded-2xl h-full">
                         <div class="w-12 h-1 bg-cyan-500 mb-6 transition-all group-hover:w-20"></div>
                         <h3 class="text-cyan-400 font-bold mb-4 uppercase text-xl">Chassis</h3>
                         <p class="text-gray-400 leading-relaxed">Spaceframe design optimized for high torsional rigidity and driver ergonomics.</p>
@@ -267,10 +305,14 @@
 
     <section id="stats-section" class="py-24 border-y border-white/5 bg-black/40">
         <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
-            <div class="reveal"><p class="text-5xl font-black text-cyan-400 mb-0">#<span class="counter" data-target="1">0</span></p><p class="text-xs uppercase tracking-widest text-gray-500 font-bold mt-3">AIR 1</p></div>
+            <div class="reveal"><p class="text-5xl font-black text-cyan-400 mb-0"><span class="counter" data-target="1">0</span></p><p class="text-xs uppercase tracking-widest text-gray-500 font-bold mt-3">AIR 1</p></div>
             <div class="reveal"><p class="text-5xl font-black text-cyan-400 mb-0"><span class="counter" data-target="1">0</span>st</p><p class="text-xs uppercase tracking-widest text-gray-500 font-bold mt-3">Acceleration</p></div>
             <div class="reveal"><p class="text-5xl font-black text-cyan-400 mb-0"><span class="counter" data-target="1">0</span>st</p><p class="text-xs uppercase tracking-widest text-gray-500 font-bold mt-3">Skidpad</p></div>
             <div class="reveal"><p class="text-5xl font-black text-cyan-400 mb-0"><span class="counter" data-target="2">0</span>nd</p><p class="text-xs uppercase tracking-widest text-gray-500 font-bold mt-3">Endurance</p></div>
+            <div class="reveal"><p class="text-5xl font-black text-cyan-400 mb-0"><span class="counter" data-target="3">0</span>rd</p><p class="text-xs uppercase tracking-widest text-gray-500 font-bold mt-3">Autocross</p></div>
+            <div class="reveal"><p class="text-5xl font-black text-cyan-400 mb-0"><span class="counter" data-target="8">0</span>th</p><p class="text-xs uppercase tracking-widest text-gray-500 font-bold mt-3">Buisness</p></div>
+            <div class="reveal"><p class="text-5xl font-black text-cyan-400 mb-0"><span class="counter" data-target="3">0</span>rd</p><p class="text-xs uppercase tracking-widest text-gray-500 font-bold mt-3">Design</p></div>
+            <div class="reveal"><p class="text-5xl font-black text-cyan-400 mb-0"><span class="counter" data-target="4">0</span>th</p><p class="text-xs uppercase tracking-widest text-gray-500 font-bold mt-3">Cost</p></div>
         </div>
     </section>
 
@@ -287,17 +329,17 @@
     <section class="parallax-wrapper" id="parallaxWrapper">
         <div class="parallax-sticky">
             <div class="parallax-track" id="parallaxTrack">
-                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P1.png"><div class="gallery-caption">01. Dynamic Testing</div></div></div>
-                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P2.png"><div class="gallery-caption">02. Victory Moment</div></div></div>
-                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P3.png"><div class="gallery-caption">03. Acceleration</div></div></div>
-                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P4.png"><div class="gallery-caption">04. Inspection</div></div></div>
-                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P5.png"><div class="gallery-caption">05. Track Prep</div></div></div>
-                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P6.png"><div class="gallery-caption">06. Team Spirit</div></div></div>
-                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P7.png"><div class="gallery-caption">07. Aerodynamics</div></div></div>
-                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P8.png"><div class="gallery-caption">08. Technical Inspection</div></div></div>
+                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P1.png"><div class="gallery-caption">01. the magnificent reveal</div></div></div>
+                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P2.png"><div class="gallery-caption">02. Where engineering meets silverware</div></div></div>
+                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P3.png"><div class="gallery-caption">03. A win shared by every hand involved.</div></div></div>
+                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P4.png"><div class="gallery-caption">04. Grip fades. Control doesn't.</div></div></div>
+                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P5.png"><div class="gallery-caption">05. The quiet before everything counts</div></div></div>
+                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P6.png"><div class="gallery-caption">06. Performance you can't quantify</div></div></div>
+                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P7.png"><div class="gallery-caption">07. The moment months of work turned into history</div></div></div>
+                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P8.png"><div class="gallery-caption">08. Engineering that holds up under scrutinity</div></div></div>
                 <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P9.png"><div class="gallery-caption">09. Podium Finish</div></div></div>
-                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P10.png"><div class="gallery-caption">10. Driver Perspective</div></div></div>
-                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P11.png"><div class="gallery-caption">11. Champion Build</div></div></div>
+                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P10.png"><div class="gallery-caption">10. When theory meets tarmac</div></div></div>
+                <div class="gallery-item"><div class="gallery-inner"><img src="./Avira_Gallery/P11.png"><div class="gallery-caption">11. No air. No glory. Just intent.</div></div></div>
             </div>
         </div>
     </section>
@@ -358,6 +400,17 @@
             });
             item.addEventListener('mouseleave', () => { 
                 inner.style.transform = `rotateX(0deg) rotateY(0deg) scale(1)`; 
+            });
+        });
+
+        // 6. Card Mouse Effect
+        document.querySelectorAll('.dept-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
             });
         });
     </script>

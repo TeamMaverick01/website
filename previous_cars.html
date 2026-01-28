@@ -21,7 +21,7 @@
         /* Hero Image Styling */
         .hero-section {
             height: 70vh;
-            background: linear-gradient(rgba(11, 15, 26, 0.2), rgba(11, 15, 26, 1)), url('/Misc_Photos/DSC_0911.JPG');
+            background: linear-gradient(rgba(11, 15, 26, 0.2), rgba(11, 15, 26, 1)), url('./Misc_Photos/DSC_0911.png');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -128,7 +128,7 @@
 
     <header>
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold text-white flex items-center no-underline">
+            <a href="./TM_Main.html" class="text-2xl font-bold text-white flex items-center no-underline">
                 <img src="./Logos/TM_logo_white.png" alt="Team MVK Logo" class="h-10 mr-3">
                 <span>Team Maverick</span>
             </a>
@@ -138,15 +138,15 @@
     <section class="hero-section">
         <div class="text-center">
             <h1 class="text-7xl font-black uppercase italic tracking-tighter mb-6">Our Fleet</h1>
-            <a href="/" class="btn-pill-cyan">Back Home</a>
+            <a href="./TM_Main.html" class="btn-pill-cyan">Back Home</a>
         </div>
     </section>
 
     <main id="fleet" class="container mx-auto px-6 py-20">
-        <div class="row g-5">
+        <div class="row g-5 justify-content-center">
             
             <div class="col-md-6">
-                <div class="car-card shadow-2xl">
+                <div class="car-card shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-cyan-500/20">
                     <img src="./Misc_Photos/DSC_0911.png" alt="Arvira 2.0" class="car-image">
                     <div class="banner-blue p-4 flex justify-between items-end">
                         <div>
@@ -178,7 +178,7 @@
             </div>
 
             <div class="col-md-6">
-                <div class="car-card shadow-2xl">
+                <div class="car-card shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-cyan-500/20">
                     <img src="./Misc_Photos/Avira.png" alt="Arvira 1.0" class="car-image">
                     <div class="banner-orange p-4 flex justify-between items-end">
                         <div>
@@ -199,9 +199,9 @@
                             <div class="spec-row"><span class="spec-label">Buisness Presentation</span><span class="spec-value">2nd</span></div>
                             <div class="mt-4 pt-4 border-t border-white/5">
                                 <h4 class="text-cyan-500 font-bold uppercase text-xs mb-2">Team Leads</h4>
-                                <p class="text-gray-400 text-sm">Captain: Aryan Dhamale • Vice Captain: Sarthak Shukla</p>
+                                <p class="text-gray-400 text-sm">Captain: Sumeet Dhanedar • Vice Captain: Kaushik Sawale</p>
                                 <h4 class="text-cyan-500 font-bold uppercase text-xs mb-2">Drivers</h4>
-                                <p class="text-gray-400 text-sm">Jay Desai & Soham Dhage</p>
+                                <p class="text-gray-400 text-sm">Jay Desai, Soham Dhage, Rugved Singham & Dhawal Patil</p>
                             </div>
                         </div>
                     </div>
@@ -209,8 +209,8 @@
             </div>
 
             <div class="col-md-6">
-                <div class="car-card shadow-2xl">
-                    <img src="./Misc_Photos/Avira.png" alt="Arvira 1.0" class="car-image">
+                <div class="car-card shadow-2xl mx-auto transition-all duration-300 hover:-translate-y-2 hover:shadow-cyan-500/20">
+                    <img src="./Misc_Photos/Supra_24.jpeg" alt="Arvira 1.0" class="car-image">
                     <div class="banner-orange p-4 flex justify-between items-end">
                         <div>
                             <h2 class="text-4xl font-bold mb-1 italic">Avira</h2>
@@ -232,26 +232,6 @@
                                 <h4 class="text-cyan-500 font-bold uppercase text-xs mb-2">Drivers</h4>
                                 <p class="text-gray-400 text-sm">Rajat Sandbhor</p>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="car-card shadow-2xl">
-                    <img src="./Misc_Photos/Artemis.jpg" alt="Maverick Prime" class="car-image">
-                    <div class="banner-teal p-4 flex justify-between items-end">
-                        <div>
-                            <h2 class="text-4xl font-bold mb-1 italic">Artemis</h2>
-                            <p class="text-white/80 text-lg font-medium">2023</p>
-                        </div>
-                        <button class="btn-specs" onclick="toggleSpecs('specs-artemis')">Specs & Team</button>
-                    </div>
-                    <div id="specs-artemis" class="specs-dropdown">
-                        <div class="specs-content">
-                            <div class="spec-row"><span class="spec-label">Event</span><span class="spec-value">Formula Student India</span></div>
-                            <div class="spec-row"><span class="spec-label">Chassis</span><span class="spec-value">AISI 4130 Spaceframe</span></div>
-                            <div class="spec-row"><span class="spec-label">Tires</span><span class="spec-value">13" OZ Racing</span></div>
                         </div>
                     </div>
                 </div>
