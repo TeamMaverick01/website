@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Maverick Racing - Join the Legacy</title>
+    <title>Team Maverick</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -265,7 +265,7 @@
                 <a href="#departments" class="nav-link text-white text-xs font-bold uppercase tracking-[0.2em] no-underline">Departments</a>
                 <a href="#the-car" class="nav-link text-white text-xs font-bold uppercase tracking-[0.2em] no-underline">The Car</a>
                 <a href="#sponsors" class="nav-link text-white text-xs font-bold uppercase tracking-[0.2em] no-underline">Sponsors</a>
-                <a href="https://forms.gle/J4LSx7xasvQjSqJ57" class="bg-[#0D98BA] text-white font-bold py-2 px-6 rounded-sm text-[10px] uppercase tracking-[0.2em] no-underline transition-all hover:bg-white hover:text-[#0D98BA]">Apply Now</a>
+                <span class="bg-gray-700 text-gray-400 font-bold py-2 px-6 rounded-sm text-[10px] uppercase tracking-[0.2em] cursor-not-allowed">Recruitment Closed</span>
             </div>
         </nav>
     </header>
@@ -280,13 +280,16 @@
                     Go beyond the classroom. Design, build, and compete with a high-performance race car on an international stage.
                 </p>
                 <div class="hero-bg w-full h-[200px] my-8 animate-pop-up" style="animation-delay: 0.5s; opacity: 0;">
-                    <div class="hero-bg w-full my-8 animate-pop-up" style="animation-delay: 0.5s; opacity: 0;">
-                    <canvas id="pixelCanvas"></canvas>
+                    <div id="hero-container" class="hero-bg w-full h-[300px] my-8 animate-pop-up" style="animation-delay: 0.5s; opacity: 1; position: relative; display: flex; justify-content: center; align-items: center; overflow: visible !important;">
+                        <canvas id="pixelCanvas" style="position: absolute; pointer-events: none; z-index: 20;"></canvas>
                     </div>
                 </div>
-                <a href="https://forms.gle/J4LSx7xasvQjSqJ57" class="animate-pop-up cta-button custom-button-bg text-white font-bold py-4 px-10 rounded-lg text-lg uppercase inline-block no-underline" style="animation-delay: 0.7s; opacity: 0;">
-                    Join the 2026 Team
-                </a>
+                
+                <div class="animate-pop-up inline-block bg-gray-800/80 border border-gray-700 p-6 rounded-xl" style="animation-delay: 0.7s; opacity: 0;">
+                    <p class="text-[#0D98BA] font-bold uppercase tracking-widest mb-2">2026 Recruitment</p>
+                    <h3 class="text-white text-2xl font-bold mb-4">Current Phase: Closed</h3>
+                    <p class="text-gray-400 text-sm max-w-xs mx-auto mb-0">Follow our social media for updates on the next intake cycle.</p>
+                </div>
             </div>
         </section>
         
@@ -302,7 +305,22 @@
                 <div class="row align-items-center g-5">
 
                     <div class="col-lg-5">
-                        <img src="./Misc_Photos/Team_pic.jpeg" class="img-fluid rounded-3" alt="Team working on a project">
+                        <div class="relative overflow-hidden rounded-3xl group cursor-pointer shadow-2xl bg-gray-800">
+        
+                            <div class="transition-transform duration-700 ease-out group-hover:scale-110">
+                                <img src="./Misc_Photos/Trophies.jpeg" 
+                                class="img-fluid w-full h-full object-cover" 
+                                alt="Team Maverick technical view">
+                            </div>
+        
+                            <div class="absolute inset-0 transition-all duration-700 ease-in-out group-hover:opacity-0 group-hover:scale-110">
+                                <img src="./Misc_Photos/Team_pic.jpeg" 
+                                class="img-fluid w-full h-full object-cover" 
+                                alt="Team Maverick working on the car">
+                            </div>
+
+                        <div class="absolute inset-0 border-2 border-transparent group-hover:border-[#0D98BA]/30 rounded-3xl transition-colors duration-500 pointer-events-none"></div>
+                        </div>
                     </div>
 
                     <div class="col-lg-7">
@@ -438,14 +456,20 @@
                 <div class="slide-track">
                     <div class="slide"><a href="https://www.mathworks.com/" target="_blank"><img src="./Logos/MATLAB-logo.png" alt="MATLAB"></a></div>
                     <div class="slide"><a href="https://www.ansys.com/" target="_blank"><img src="./Logos/download.png" alt="ANSYS"></a></div>
-                    <div class="slide"><a href="https://www.flowcode.co.uk/" target="_blank"><img src="./Logos/logo1.png" alt="Flowcode"></a></div>
+                    <div class="slide"><a href="https://flowcodeautomation.com/" target="_blank"><img src="./Logos/logo1.png" alt="Flowcode"></a></div>
                     <div class="slide"><a href="https://www.solidworks.com/" target="_blank"><img src="./Logos/SolidWorks-Logo.png" alt="Solidworks"></a></div>
                     <div class="slide"><img src="./Logos/Screenshot_2025-07-10_203508-removebg-preview.png" alt="LaserTech"></div>
+                    <div class="slide"><a href="https://nemade.in/" target="_blank"><img src="./Logos/nemade.jpg" alt="Nemade Engineers"></a></div>
+                    <div class="slide"><a href="http://www.sme.in/machinisttechno/about-us.html" target="_blank"><img src="./Logos/machinist.png" alt="Machinist Technology"></a></div>
+                    <div class="slide"><a href="https://kakadelaser.in/" target="_blank"><img src="./Logos/kakade_laser.jpg" alt="Kakade Lasers"></a></div>
                     <div class="slide"><a href="https://www.mathworks.com/" target="_blank"><img src="./Logos/MATLAB-logo.png" alt="MATLAB"></a></div>
                     <div class="slide"><a href="https://www.ansys.com/" target="_blank"><img src="./Logos/download.png" alt="ANSYS"></a></div>
-                    <div class="slide"><a href="https://www.flowcode.co.uk/" target="_blank"><img src="./Logos/logo1.png" alt="Flowcode"></a></div>
+                    <div class="slide"><a href="https://flowcodeautomation.com/" target="_blank"><img src="./Logos/logo1.png" alt="Flowcode"></a></div>
                     <div class="slide"><a href="https://www.solidworks.com/" target="_blank"><img src="./Logos/SolidWorks-Logo.png" alt="Solidworks"></a></div>
                     <div class="slide"><img src="./Logos/Screenshot_2025-07-10_203508-removebg-preview.png" alt="LaserTech"></div>
+                    <div class="slide"><a href="https://nemade.in/" target="_blank"><img src="./Logos/nemade.jpg" alt="Nemade Engineers"></a></div>
+                    <div class="slide"><a href="http://www.sme.in/machinisttechno/about-us.html" target="_blank"><img src="./Logos/machinist.png" alt="Machinist Technology"></a></div>
+                    <div class="slide"><a href="https://kakadelaser.in/" target="_blank"><img src="./Logos/kakade_laser.jpg" alt="Kakade Lasers"></a></div>
                 </div>
             </div>
         </section>
@@ -582,7 +606,7 @@
                     </h5>
                     <ul class="nav flex-column mt-4">
                         <li class="nav-item mb-2"><a href="/alumni" class="nav-link p-0 text-gray-400 hover:text-cyan-500 transition-colors">Alumni Hall</a></li>
-                        <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-gray-400 hover:text-cyan-500 transition-colors">Newsletter</a></li>
+                        <li class="nav-item mb-2"><a href="https://www.f1technical.net/" target = "_blank" class="nav-link p-0 text-gray-400 hover:text-cyan-500 transition-colors">Newsletter</a></li>
                     </ul>                
                 </div>
 
@@ -591,10 +615,10 @@
             <div class="footer-heading-underline"></div>
         </h5>
         <div class="flex justify-center space-x-5 mt-4">
-            <a href="https://www.instagram.com/teammaverick_fsae" class="text-gray-400 hover:text-cyan-500 transition-colors" aria-label="Instagram">
+            <a href="https://www.instagram.com/teammaverick_fsae" target = "_blank" class="text-gray-400 hover:text-cyan-500 transition-colors" aria-label="Instagram">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm5.25-8.25a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"/></svg>
             </a>
-            <a href="https://www.linkedin.com/company/team-mvk-racing/" class="text-gray-400 hover:text-cyan-500 transition-colors" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/team-maverick/" target = "_blank" class="text-gray-400 hover:text-cyan-500 transition-colors" aria-label="LinkedIn">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 5.523 4.477 10 10 10 5.523 0 10-4.477 10-10C22 6.477 17.523 2 12 2zm-2 16h-2V9h2v9zm-1-10c-1.104 0-2-.896-2-2s.896-2 2-2 2 .896 2 2-.896 2-2 2zm7 10h-2V13c0-.552-.448-1-1-1s-1 .448-1 1v5h-2v-7c0-2.76 2.24-5 5-5s5 2.24 5 5v7z"/></svg>
             </a>
         </div>
@@ -635,78 +659,121 @@
     </script>
 
     <script>
-    const canvas = document.getElementById('pixelCanvas');
-    const ctx = canvas.getContext('2d', { willReadFrequently: true });
-    const img = new Image();
-    
-    // Path to your logo
-    img.src = './Logos/TM_logo_white.png'; 
+    (function() {
+        const canvas = document.getElementById('pixelCanvas');
+        const ctx = canvas.getContext('2d', { willReadFrequently: true });
+        const img = new Image();
+        
+        // Use a cache-busting string to force a fresh load on every refresh
+        img.src = './Logos/TM_logo_white.png?v=' + Date.now(); 
 
-    let particles = [];
-    const pixelSize = 4; // Size of the "pixels". Increase for a more blocky look.
+        let particles = [];
+        const pixelSize = 2; 
+        let animationStarted = false;
 
-    img.onload = function() {
-        // Set canvas size based on image aspect ratio
-        const scale = 250 / img.height; 
-        canvas.width = img.width * scale;
-        canvas.height = 250;
+        function init() {
+            const container = document.getElementById('hero-container');
+            if (!container) return;
 
-        // Draw image initially to get data
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+            // Set canvas size exactly to the hero container
+            canvas.width = container.offsetWidth;
+            canvas.height = container.offsetHeight;
 
-        // Scan image data for non-transparent pixels
-        for (let y = 0; y < canvas.height; y += pixelSize) {
-            for (let x = 0; x < canvas.width; x += pixelSize) {
-                const index = (y * canvas.width + x) * 4;
-                const alpha = imageData[index + 3];
+            const scale = 250 / img.height; 
+            const logoWidth = img.width * scale;
+            const logoHeight = 250;
 
-                if (alpha > 128) { // If pixel is not transparent
-                    particles.push({
-                        x: Math.random() * canvas.width, // Start at random X
-                        y: Math.random() * canvas.height, // Start at random Y
-                        targetX: x,
-                        targetY: y,
-                        color: `rgba(255, 255, 255, ${alpha / 255})`,
-                        speed: 0.02 + Math.random() * 0.05
-                    });
+            const tempCanvas = document.createElement('canvas');
+            const tempCtx = tempCanvas.getContext('2d');
+            tempCanvas.width = logoWidth;
+            tempCanvas.height = logoHeight;
+            tempCtx.drawImage(img, 0, 0, logoWidth, logoHeight);
+            
+            const imageData = tempCtx.getImageData(0, 0, logoWidth, logoHeight).data;
+
+            // Landing spot: Exact center of the hero container
+            const targetXBase = (canvas.width / 2) - (logoWidth / 2);
+            const targetYBase = (canvas.height / 2) - (logoHeight / 2);
+
+            particles = [];
+            for (let y = 0; y < logoHeight; y += pixelSize) {
+                for (let x = 0; x < logoWidth; x += pixelSize) {
+                    const index = (y * logoWidth + x) * 4;
+                    if (imageData[index + 3] > 128) {
+                        const corner = Math.floor(Math.random() * 4);
+                        let startX, startY;
+
+                        // Start points are outside the visible area
+                        if (corner === 0) { startX = -500; startY = -500; } 
+                        else if (corner === 1) { startX = canvas.width + 500; startY = -500; }
+                        else if (corner === 2) { startX = -500; startY = canvas.height + 500; }
+                        else { startX = canvas.width + 500; startY = canvas.height + 500; }
+
+                        particles.push({
+                            x: startX,
+                            y: startY,
+                            targetX: targetXBase + x,
+                            targetY: targetYBase + y,
+                            color: `rgba(255, 255, 255, ${imageData[index+3] / 255})`,
+                            speed: 0.03 + Math.random() * 0.04 
+                        });
+                    }
                 }
             }
         }
-        animate();
-    };
 
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        let finished = true;
-
-        particles.forEach(p => {
-            // Lerp (Linear Interpolation) movement
-            const dx = p.targetX - p.x;
-            const dy = p.targetY - p.y;
-            
-            if (Math.abs(dx) > 0.1 || Math.abs(dy) > 0.1) {
-                p.x += dx * p.speed;
-                p.y += dy * p.speed;
-                finished = false;
-            } else {
-                p.x = p.targetX;
-                p.y = p.targetY;
-            }
-
-            ctx.fillStyle = p.color;
-            ctx.fillRect(p.x, p.y, pixelSize - 1, pixelSize - 1);
-        });
-
-        if (!finished) {
-            requestAnimationFrame(animate);
-        } else {
-            // Optional: Draw the actual crisp image once animation is done
+        function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            let finished = true;
+
+            // Maverick Cyan Glow
+            ctx.shadowBlur = 12;
+            ctx.shadowColor = "#0D98BA"; 
+
+            particles.forEach(p => {
+                const dx = p.targetX - p.x;
+                const dy = p.targetY - p.y;
+                
+                if (Math.abs(dx) > 1.5 || Math.abs(dy) > 1.5) {
+                    p.x += dx * p.speed;
+                    p.y += dy * p.speed;
+                    finished = false;
+                } else {
+                    p.x = p.targetX;
+                    p.y = p.targetY;
+                }
+
+                ctx.fillStyle = p.color;
+                ctx.fillRect(p.x, p.y, pixelSize, pixelSize); 
+            });
+
+            if (!finished) {
+                requestAnimationFrame(animate);
+            } else {
+                ctx.shadowBlur = 0;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                const scale = 250 / img.height;
+                const logoWidth = img.width * scale;
+                ctx.drawImage(img, (canvas.width/2)-(logoWidth/2), (canvas.height/2)-125, logoWidth, 250);
+            }
         }
-    }
+
+        // Wait for image to fully load before allowing observer
+        img.onload = function() {
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting && !animationStarted) {
+                    animationStarted = true;
+                    init();
+                    animate();
+                }
+            }, { threshold: 0.1 });
+            observer.observe(document.getElementById('hero-container'));
+        };
+
+        window.addEventListener('resize', () => {
+            if (!animationStarted) init();
+        });
+    })();
 </script>
 
 </body>
